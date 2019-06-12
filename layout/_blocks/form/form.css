@@ -1,0 +1,137 @@
+.form {
+    padding-left: 14px;
+    padding-right: 15px;
+    padding-top: 23px;
+
+    &__title {
+        margin-bottom: 11px;
+    }
+
+    &__control {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 9px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__control--select {
+        margin-bottom: 17px;
+    }
+
+    &__control--radio {
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    &__control--checkbox {
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 6px;
+    }
+
+    &__label {
+        font-size: 12px;
+        letter-spacing: 0.45px;
+        line-height: calc(20/12);
+        color: #010101;
+    }
+
+    &__field {
+        font-size: 12px;
+        line-height: calc(20/12);
+        width: 224px;
+        box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.15);
+        border: 1px solid #b7b7b7;
+        background-color: #ffffff;
+        outline: none;
+        padding-top: 3px;
+        padding-bottom: 5px;
+        padding-left: 7px;
+        box-sizing: border-box;
+
+        &::placeholder {
+            color: #c0c0c0;
+        }
+    }
+
+    &__field-select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background: url("../images/svg-icon/select.svg") no-repeat;
+        background-position-x: calc(100% - 5px);
+        background-position-y: 5px;
+    }
+
+    &__field-checkbox {
+        display: none;
+
+        & + .form__label {
+            position: relative;
+            padding-left: 20px;
+
+            &:before {
+                position: absolute;
+                content: url("../images/svg-icon/checkbox.svg");
+                left: 0;
+                top: 2px;
+            }
+        }
+    }
+
+    &__field-radio {
+        display: none;
+
+        & + .form__label {
+            position: relative;
+            padding-left: 20px;
+
+            &:before {
+                position: absolute;
+                content: url("../images/svg-icon/radiobutton.svg");
+                top: 2px;
+                left: 0;
+            }
+        }
+    }
+
+    &__field-textarea {
+        width: 304px;
+        min-height: 123px;
+        resize: none;
+        margin-bottom: 7px;
+    }
+
+    &__button {
+        font-size: 14px;
+        font-weight: bold;
+        line-height: calc(20/14);
+        color: #ffffff;
+        border: 1px solid #000000;
+        background-color: #202020;
+        padding: 6px 22px;
+    }
+}
+
+.form__field-checkbox:checked + .form__label {
+    position: relative;
+
+    &:before {
+        position: absolute;
+        content: url("../images/svg-icon/checkbox.svg");
+    }
+}
+
+.form__field-radio:checked + .form__label {
+    position: relative;
+
+    &:before {
+        position: absolute;
+        content: url("../images/svg-icon/radiobutton.svg");
+    }
+}

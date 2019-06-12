@@ -1,0 +1,23 @@
+.work {
+    padding-top: 11px;
+    padding-left: 12px;
+    padding-right: 15px;
+
+    @media (--S) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .work__link {
+        color: #0075d0;
+        text-decoration: underline;
+    }
+
+    &__text {
+        margin-bottom: 3px;
+    }
+
+    &__notice {
+        padding-left: 23px;
+    }
+}

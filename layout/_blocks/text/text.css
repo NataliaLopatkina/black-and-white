@@ -1,0 +1,17 @@
+.text {
+    font-size: 13px;
+    line-height: calc(20/13);
+    color: var(--black);
+
+    &--italic {
+        font-style: italic;
+    }
+
+    &--color {
+        color: #8b8b8b;
+    }
+
+    &--bold {
+        font-weight: bold;
+    }
+}

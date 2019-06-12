@@ -1,0 +1,12 @@
+.copyright {
+    &__text {
+        font-size: 13px;
+        line-height: calc(20/13);
+        color: #656565;
+    }
+
+    .copyright__link {
+        color: #0075d0;
+        text-decoration: underline;
+    }
+}

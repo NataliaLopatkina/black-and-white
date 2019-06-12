@@ -1,0 +1,44 @@
+.table {
+    padding-left: 14px;
+    padding-right: 15px;
+    padding-top: 37px;
+
+    @media (--M) {
+        padding-top: 20px;
+    }
+
+    &__title {
+        margin-bottom: 12px;
+    }
+
+    &__content {
+        border-collapse: collapse;
+        border: 1px solid #d5d5d5;
+    }
+
+    &__header {
+        background-color: #efefef;
+    }
+
+    &__cell {
+        text-align: left;
+        border: 1px solid #d5d5d5;
+        width: 325px;
+        padding-top: 6px;
+        padding-bottom: 4px;
+        padding-left: 12px;
+        box-sizing: border-box;
+
+        &:first-child {
+            width: 141px;
+        }
+
+        &:nth-child(2) {
+            width: 272px;
+        }
+
+        &:last-child {
+            width: 225px;
+        }
+    }
+}

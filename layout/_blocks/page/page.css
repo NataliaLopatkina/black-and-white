@@ -1,0 +1,46 @@
+@import "../box/box.css";
+@import "../header/header.css";
+@import "../main/main.css";
+@import "../footer/footer.css";
+
+@font-face {
+    font-family: "ArialMT";
+    src: url("../fonts/ArialMT/Arial-BoldMT.woff2") format("woff2"),
+        url("../fonts/ArialMT/Arial-BoldMT.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "ArialMT";
+    src: url("../fonts/ArialMT/ArialMT.woff2") format("woff2"),
+        url("../fonts/ArialMT/ArialMT.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "ArialMT";
+    src: url("../fonts/ArialMT/Arial-ItalicMT.woff2") format("woff2"),
+        url("../fonts/ArialMT/Arial-ItalicMT.woff") format("woff");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Birch";
+    src: url("../fonts/Birch/BirchStd.woff2") format("woff2"),
+        url("../fonts/Birch/BirchStd.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.page {
+    font-family: "ArialMT", "Arial", sans-serif;
+    background: url("../images/background/background-main.jpg");
+
+    a {
+        text-decoration: none;
+    }
+}
+

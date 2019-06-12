@@ -1,0 +1,37 @@
+.portfolio {
+    padding-left: 13px;
+    padding-right: 15px;
+    padding-top: 23px;
+
+    @media (--S) {
+        padding-left: 20px;
+        padding-right: 20px;
+
+    }
+
+    &__title {
+        margin-bottom: 9px;
+    }
+
+    &__list {
+        list-style: none;
+        display: flex;
+        margin: -10px;
+
+        @media (--M) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__item {
+        width: 224px;
+        height: 166px;
+        border: 11px solid #e2e2e2;
+        box-sizing: border-box;
+        margin: 10px;
+    }
+
+    &__img {
+        width: 100%;
+    }
+}

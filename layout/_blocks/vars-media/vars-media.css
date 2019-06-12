@@ -1,0 +1,35 @@
+@import "../_settings/_settings.css";
+
+:root {
+
+    @if $mobileFirst {
+
+        @custom-media --S   (width >= 577px);
+        @custom-media --M   (width >= 769px);
+        @custom-media --L   (width >= 1025px);
+        @custom-media --XL  (width >= 1200px);
+        @custom-media --XXL (width >= 1500px);
+
+        @media (--S) {}
+        @media (--M) {}
+        @media (--L) {}
+        @media (--XL) {}
+        @media (--XXL) {}
+    }
+
+    @else {
+
+        @custom-media --XS  (width < 577px);
+        @custom-media --S   (width < 769px);
+        @custom-media --M   (width < 992px);
+        @custom-media --L   (width < 1025px);
+        @custom-media --XL  (width < 1500px); /* Do not use! Standard styles. */
+        @custom-media --XXL (width >= 1500px);
+
+        @media (--XXL) {}
+        @media (--XL) {}
+        @media (--L) {}
+        @media (--M) {}
+        @media (--S) {}
+    }
+}

@@ -1,0 +1,64 @@
+@import "../_settings/_settings.css";
+@import "../vars-media/vars-media.css";
+
+.box {
+    box-sizing: border-box;
+    margin-right: auto;
+    margin-left: auto;
+    width: 1000px;
+
+    @if $mobileFirst {
+        width: 100%;
+        min-width: 320px;
+        max-width: 480px;
+
+        @media (--S) {
+            width: 540px;
+            max-width: none;
+        }
+
+        @media (--M) {
+            width: 720px;
+        }
+
+        @media (--L) {
+            width: 960px;
+        }
+
+        /* @media (--XL) {
+            width: 1140px;
+        }
+
+        @media (--XXL) {
+            width: 1400px;
+        } */
+    }
+
+    @else {
+        width: 1000px;
+
+        /* @media (--XXL) {
+            width: 1400px;
+        } */
+
+        @media (--L) {
+            width: 960px;
+        }
+
+        @media (--M) {
+            width: 720px;
+        }
+
+        @media (--S) {
+            width: 540px;
+        }
+
+        @media (--XS) {
+            width: 100%;
+            min-width: 320px;
+            max-width: 480px;
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+    }
+}
