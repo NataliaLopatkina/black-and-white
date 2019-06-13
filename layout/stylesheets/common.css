@@ -384,9 +384,6 @@ button[disabled] {
 :root {
     --white: white;
     --black: black;
-    --main-dark: #303030;
-    --blue: #2998FF;
-    --grey: #CFCFCF;
 }
 
 :root { /* Do not use! Standard styles. */
@@ -397,8 +394,10 @@ button[disabled] {
             box-sizing: border-box;
     margin-right: auto;
     margin-left: auto;
-    width: 1000px;
-        width: 1000px
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 1024px;
+        width: 1024px
 
         /* @media (--XXL) {
             width: 1400px;
@@ -430,7 +429,8 @@ button[disabled] {
 .header__title {
         font-family: "Birch", "Time New Romans", sans-serif;
         font-size: 36px;
-        color: #ffffff;
+        color: white;
+        color: var(--white);
         height: 36px;
     }
 
@@ -455,8 +455,7 @@ button[disabled] {
     }
 
 .header__input {
-        max-width: 352px;
-        width: 100%;
+        width: 352px;
         height: 26px;
         -webkit-box-sizing: border-box;
                 box-sizing: border-box;
@@ -464,9 +463,10 @@ button[disabled] {
                 box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.21);
         border: 1px solid #4c4c4c;
         background-color: #323232;
-        color: #ffffff;
+        color: white;
+        color: var(--white);
         margin-right: 11px;
-        outline: none;
+        outline: none
     }
 
 .header__button {
@@ -477,13 +477,16 @@ button[disabled] {
         font-size: 14px;
         font-weight: 700;
         line-height: calc(20/14);
-        color: #ffffff;
+        color: white;
+        color: var(--white);
         border: 1px solid #4c4c4c;
-        background-color: #000000;
+        background-color: black;
+        background-color: var(--black);
     }
 
 .hero {
-    background: #000000;
+    background: black;
+    background: var(--black);
 }
 
 .hero__box {
@@ -492,22 +495,19 @@ button[disabled] {
 
 .hero .hero__item {
         width: 100%;
-        height: 329px;
         -webkit-box-sizing: border-box;
                 box-sizing: border-box;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: end;
-            -ms-flex-align: end;
-                align-items: flex-end;
-        background-image: url("../images/hero/hero.jpg");
+        position: relative;
     }
 
 .hero__description {
         padding: 14px 21px;
-        background: #000000;
+        background: black;
+        background: var(--black);
         opacity: 0.5;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
     }
 
 .hero__text {
@@ -518,17 +518,17 @@ button[disabled] {
     }
 
 .nav__list {
-        background-color: black;
-        background-color: var(--black);
         list-style: none;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
+        background-color: black;
+        background-color: var(--black)
     }
 
 .nav__item {
         padding: 7px 24px 4px 24px;
-        border-right: 1px solid #272727;
+        border-right: 1px solid #272727
     }
 
 .nav__link {
@@ -536,13 +536,11 @@ button[disabled] {
         font-weight: 700;
         line-height: calc(20/14);
         color: white;
-        color: var(--white);
+        color: var(--white)
     }
 
 .work {
-    padding-top: 11px;
-    padding-left: 12px;
-    padding-right: 15px
+    padding-top: 11px
 }
 
 .work .work__link {
@@ -592,8 +590,6 @@ button[disabled] {
     }
 
 .portfolio {
-    padding-left: 13px;
-    padding-right: 15px;
     padding-top: 23px
 }
 
@@ -623,9 +619,8 @@ button[disabled] {
     }
 
 .description {
-    padding-left: 13px;
-    padding-right: 15px;
-    padding-top: 25px
+    padding-top: 25px;
+    overflow: hidden
 }
 
 .description__title {
@@ -658,9 +653,8 @@ button[disabled] {
     }
 
 .table {
-    padding-left: 14px;
-    padding-right: 15px;
-    padding-top: 37px
+    padding-top: 37px;
+    padding-left: 3px
 }
 
 .table__title {
@@ -669,7 +663,7 @@ button[disabled] {
 
 .table__content {
         border-collapse: collapse;
-        border: 1px solid #d5d5d5;
+        border: 1px solid #d5d5d5
     }
 
 .table__header {
@@ -680,9 +674,10 @@ button[disabled] {
         text-align: left;
         border: 1px solid #d5d5d5;
         width: 325px;
-        padding-top: 6px;
+        padding-top: 5px;
         padding-bottom: 4px;
-        padding-left: 12px;
+        padding-left: 9px;
+        padding-right: 12px;
         -webkit-box-sizing: border-box;
                 box-sizing: border-box
     }
@@ -697,12 +692,16 @@ button[disabled] {
 
 .table__cell:last-child {
             width: 225px;
+            padding-left: 15px;
+        }
+
+.table td.table__cell:nth-child(2) {
+            padding-left: 14px;
         }
 
 .form {
-    padding-left: 14px;
-    padding-right: 15px;
     padding-top: 23px;
+    padding-left: 1px;
 }
 
 .form__title {
@@ -797,7 +796,7 @@ button[disabled] {
         -moz-appearance: none;
         appearance: none;
         background: url("../images/svg-icon/select.svg") no-repeat;
-        background-position-x: calc(100% - 5px);
+        background-position-x: calc(100% - 3px);
         background-position-y: 5px;
     }
 
@@ -807,14 +806,14 @@ button[disabled] {
 
 .form__field-checkbox + .form__label {
             position: relative;
-            padding-left: 20px
+            padding-left: 21px
         }
 
 .form__field-checkbox + .form__label:before {
                 position: absolute;
                 content: url("../images/svg-icon/checkbox.svg");
-                left: 0;
-                top: 2px;
+                left: 2px;
+                top: 1px;
             }
 
 .form__field-radio {
@@ -823,21 +822,21 @@ button[disabled] {
 
 .form__field-radio + .form__label {
             position: relative;
-            padding-left: 20px
+            padding-left: 22px
         }
 
 .form__field-radio + .form__label:before {
                 position: absolute;
                 content: url("../images/svg-icon/radiobutton.svg");
-                top: 2px;
-                left: 0;
+                top: 1px;
+                left: 2px;
             }
 
 .form__field-textarea {
         width: 304px;
         min-height: 123px;
         resize: none;
-        margin-bottom: 7px;
+        margin-bottom: 7px
     }
 
 .form__button {
@@ -845,7 +844,8 @@ button[disabled] {
         font-weight: 700;
         line-height: calc(20/14);
         color: #ffffff;
-        border: 1px solid #000000;
+        border: 1px solid black;
+        border: 1px solid var(--black);
         background-color: #202020;
         padding: 6px 22px;
     }
@@ -869,10 +869,12 @@ button[disabled] {
     }
 
 .main__content {
-        background: #ffffff;
+        width: 1000px;
+        background: white;
+        background: var(--white);
         -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
                 box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
-        padding-bottom: 25px;
+        padding-bottom: 25px
     }
 
 .copyright__text {
@@ -949,7 +951,10 @@ button[disabled] {
 
 .box {
             width: 960px
-}}
+}
+    .main__content {
+            width: 934px
+    }}
 
 @media   (max-width: 991px) {
 
@@ -963,7 +968,7 @@ button[disabled] {
     .portfolio__list {
             -ms-flex-wrap: wrap;
                 flex-wrap: wrap
-    } 
+    }
 
     .description__title {
             margin-bottom: 28px
@@ -985,8 +990,16 @@ button[disabled] {
         }
 
 .table {
-        padding-top: 20px
-}}
+        padding-top: 20px;
+        overflow-x: auto
+}
+
+    .table__content {
+            width: 960px
+    }
+    .main__content {
+            width: 694px
+    }}
 
 @media   (max-width: 768px) {
 
@@ -1013,17 +1026,12 @@ button[disabled] {
                     justify-content: space-between
     }
 
+    .header__input {
+            max-width: 352px;
+            width: 100%
+    }
+
 .work {
-        padding-left: 20px;
-        padding-right: 20px
-}
-
-.portfolio {
-        padding-left: 20px;
-        padding-right: 20px
-}
-
-.description {
         padding-left: 20px;
         padding-right: 20px
 }
@@ -1042,7 +1050,10 @@ button[disabled] {
 
         .description__list:nth-child(2) {
                 padding-left: 35px
-        }}
+        }
+    .main__content {
+            width: 514px
+    }}
 
 @media  (max-width: 576px) {
 
@@ -1050,8 +1061,8 @@ button[disabled] {
             width: 100%;
             min-width: 320px;
             max-width: 480px;
-            padding-left: 24px;
-            padding-right: 24px
+            padding-left: 15px;
+            padding-right: 15px
 }
 
 .button-menu {
@@ -1060,27 +1071,53 @@ button[disabled] {
         background: none;
         border: none;
         padding: 0;
-        width: 22px;
-        height: 22px;
+        width: 20px;
+        height: 20px;
 }
 
         .button-menu__container {
             display: block;
-            width: 24px;
+            width: 20px;
             height: 2px;
-            background: #ffffff;
+            background: white;
+            background: var(--white);
             position: relative
         }
 
-            .button-menu__container:before {
+            .button-menu__container:before,
+            .button-menu__container:after {
                 position: absolute;
                 content: "";
                 display: block;
-                width: 22px;
+                width: 20px;
                 height: 2px;
-                background: #ffffff;
+                background: white;
+                background: var(--white);
+            }
+
+            .button-menu__container:before {
                 top: -7px;
             }
+
+            .button-menu__container:after {
+                bottom: -7px;
+            }
+            .button-menu--closed .button-menu__container {
+                -webkit-transform: rotate(45deg);
+                    -ms-transform: rotate(45deg);
+                        transform: rotate(45deg)
+            }
+
+                .button-menu--closed .button-menu__container:before {
+                    -webkit-transform: rotate(-90deg);
+                        -ms-transform: rotate(-90deg);
+                            transform: rotate(-90deg);
+                    top: 0;
+                }
+
+                .button-menu--closed .button-menu__container:after {
+                    display: none;
+                }
 
     .header__actions {
             display: -webkit-box;
@@ -1093,5 +1130,81 @@ button[disabled] {
                 -ms-flex-align: center;
                     align-items: center;
             width: 100%
+    }
+
+.nav {
+        position: absolute;
+        top: 62px;
+        left: 0;
+        width: 100%;
+        opacity: 0;
+        visibility: hidden;
+        height: 0;
+        -webkit-transition-property: opacity, visibility;
+        -o-transition-property: opacity, visibility;
+        transition-property: opacity, visibility;
+        -webkit-transition-duration: 0.5s;
+             -o-transition-duration: 0.5s;
+                transition-duration: 0.5s;
+        -webkit-transition-timing-function: ease;
+             -o-transition-timing-function: ease;
+                transition-timing-function: ease;
+}
+
+        .nav--opened {
+            opacity: 1;
+            visibility: visible;
+        }
+
+    .nav__list {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            text-align: center;
+            background-color: #171717
+    }
+
+    .nav__item {
+            border-right: 0
+    }
+
+    .nav__link {
+            text-transform: uppercase
+    }
+
+.work {
+        padding-left: 0;
+        padding-right: 0
+}
+
+.portfolio {
+        padding-left: 0;
+        padding-right: 0
+}
+
+    .portfolio__list {
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center
+    }
+
+.description {
+        padding-left: 0;
+        padding-right: 0
+}
+
+    .description__content {
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center
+    }
+
+    .form__field-textarea {
+            width: 290px
+    }
+    .main__content {
+            max-width: 450px;
+            min-width: 290px
     }
         }

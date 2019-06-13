@@ -1,14 +1,42 @@
 .nav {
+    
+    @media (--XS) {
+        position: absolute;
+        top: 62px;
+        left: 0;
+        width: 100%;
+        opacity: 0;
+        visibility: hidden;
+        height: 0;
+        transition-property: opacity, visibility;
+        transition-duration: 0.5s;
+        transition-timing-function: ease;
+
+        &--opened {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
 
     &__list {
-        background-color: var(--black);
         list-style: none;
         display: flex;
+        background-color: var(--black);
+
+        @media (--XS) {
+            flex-direction: column;
+            text-align: center;
+            background-color: #171717;
+        }
     }
 
     &__item {
         padding: 7px 24px 4px 24px;
         border-right: 1px solid #272727;
+
+        @media (--XS) {
+            border-right: 0;
+        }
     }
 
     &__link {
@@ -16,5 +44,9 @@
         font-weight: bold;
         line-height: calc(20/14);
         color: var(--white);
+
+        @media (--XS) {
+            text-transform: uppercase;
+        }
     }
 }

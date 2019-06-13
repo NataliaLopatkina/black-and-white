@@ -1,11 +1,14 @@
 .work {
     padding-top: 11px;
-    padding-left: 12px;
-    padding-right: 15px;
 
     @media (--S) {
         padding-left: 20px;
         padding-right: 20px;
+    }
+
+    @media (--XS) {
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .work__link {

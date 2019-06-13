@@ -1,12 +1,9 @@
 .portfolio {
-    padding-left: 13px;
-    padding-right: 15px;
     padding-top: 23px;
 
-    @media (--S) {
-        padding-left: 20px;
-        padding-right: 20px;
-
+    @media (--XS) {
+        padding-left: 0;
+        padding-right: 0;
     }
 
     &__title {
@@ -20,6 +17,10 @@
 
         @media (--M) {
             flex-wrap: wrap;
+        }
+
+        @media (--XS) {
+            justify-content: center;
         }
     }
 

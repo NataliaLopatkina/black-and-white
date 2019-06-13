@@ -1,5 +1,5 @@
-# FCG
-Верстка для проекта FCG.
+# Black and white
+Верстка макета Black and white.
 
 ## Требования
 - node v6.7.0

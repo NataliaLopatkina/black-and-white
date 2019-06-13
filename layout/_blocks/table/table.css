@@ -1,10 +1,10 @@
 .table {
-    padding-left: 14px;
-    padding-right: 15px;
     padding-top: 37px;
+    padding-left: 3px;
 
     @media (--M) {
         padding-top: 20px;
+        overflow-x: auto;
     }
 
     &__title {
@@ -14,6 +14,10 @@
     &__content {
         border-collapse: collapse;
         border: 1px solid #d5d5d5;
+
+        @media (--M) {
+            width: 960px;
+        }
     }
 
     &__header {
@@ -24,9 +28,10 @@
         text-align: left;
         border: 1px solid #d5d5d5;
         width: 325px;
-        padding-top: 6px;
+        padding-top: 5px;
         padding-bottom: 4px;
-        padding-left: 12px;
+        padding-left: 9px;
+        padding-right: 12px;
         box-sizing: border-box;
 
         &:first-child {
@@ -39,6 +44,13 @@
 
         &:last-child {
             width: 225px;
+            padding-left: 15px;
+        }
+    }
+
+    td.table__cell {
+        &:nth-child(2) {
+            padding-left: 14px;
         }
     }
 }

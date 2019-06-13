@@ -10,8 +10,26 @@
 
 .main {
     &__content {
-        background: #ffffff;
+        width: 1000px;
+        background: var(--white);
         box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
         padding-bottom: 25px;
+
+        @media (--L) {
+            width: 934px;
+        }
+
+        @media (--M) {
+            width: 694px;
+        }
+
+        @media (--S) {
+            width: 514px;
+        }
+
+        @media (--XS) {
+            max-width: 450px;
+            min-width: 290px;
+        }
     }
 }
