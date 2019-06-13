@@ -1,0 +1,26 @@
+mixin form()
+    div(class="form")
+        h3(class="title title--size-s form__title") <span class="title__color">F</span>orms
+        form(class="form__content" method="post" action="#5")
+            div(class="form__control")
+                label(class="form__label" for="text") Text:
+                input(class="form__field" type="text" id="text" placeholder="Input type text")
+            div(class="form__control form__control--select")
+                label(class="form__label" for="select") Select:
+                select(class="form__field form__field-select" id="select")
+                    option() Option
+                    option() Option
+                    option() Option
+                    option() Option
+                    option() Option
+            div(class="form__control form__control--checkbox")
+                input(class="form__field-checkbox" type="checkbox" id="checkbox")
+                label(class="form__label" for="checkbox") Sed ut perspiciatis unde omnis iste natus
+            div(class="form__control form__control--radio")
+                input(class="form__field-radio" type="radio" id="radio")
+                label(class="form__label" for="radio") Lorem ipsum dolor sit amet, consectetur
+            div(class="form__control")
+                label(class="form__label" for="textarea") Textarea:
+                textarea(class="form__field form__field-textarea" rows="5" id="textarea")
+            button(type="submit" class="form__button") Button
+    // END .form

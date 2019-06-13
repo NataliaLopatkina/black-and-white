@@ -557,8 +557,19 @@ button[disabled] {
         font-weight: 700;
         line-height: calc(20/14);
         color: white;
-        color: var(--white)
+        color: var(--white);
+        -webkit-transition: color 0.25s ease;
+        -o-transition: color 0.25s ease;
+        transition: color 0.25s ease
     }
+
+.nav__link:hover {
+            color: #0098d0;
+        }
+
+.nav__link:active {
+            color: #64bbff;
+        }
 
 .work {
     padding-top: 11px

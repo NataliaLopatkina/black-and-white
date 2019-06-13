@@ -43,6 +43,15 @@
         font-weight: bold;
         line-height: calc(20/14);
         color: var(--white);
+        transition: color 0.25s ease;
+
+        &:hover {
+            color: #0098d0;
+        }
+
+        &:active {
+            color: #64bbff;
+        }
 
         @media (--XS) {
             text-transform: uppercase;
