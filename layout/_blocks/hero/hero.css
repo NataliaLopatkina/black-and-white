@@ -18,6 +18,11 @@
         position: absolute;
         bottom: 0;
         width: 100%;
+        box-sizing: border-box;
+
+        @media (--XS) {
+            padding: 10px;
+        }
     }
 
     &__text {
@@ -25,5 +30,9 @@
         line-height: calc(14/12);
         color: #dedede;
         max-width: 359px;
+
+        @media (--XS) {
+            max-width: 100%;
+        }
     }
 }

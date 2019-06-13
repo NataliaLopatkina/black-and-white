@@ -5,6 +5,7 @@
     @media (--M) {
         padding-top: 20px;
         overflow-x: auto;
+        margin-right: -12px;
     }
 
     &__title {
@@ -13,10 +14,16 @@
 
     &__content {
         border-collapse: collapse;
-        border: 1px solid #d5d5d5;
 
         @media (--M) {
             width: 960px;
+            display: flex;
+
+            &:after {
+                content: "";
+                width: 15px;
+                background: #ffffff;
+            }
         }
     }
 

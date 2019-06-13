@@ -7,7 +7,6 @@
         width: 100%;
         opacity: 0;
         visibility: hidden;
-        height: 0;
         transition-property: opacity, visibility;
         transition-duration: 0.5s;
         transition-timing-function: ease;

@@ -26,6 +26,7 @@
 
     &__logo {
         @media (--S) {
+            display: inline-block;
             margin-bottom: 10px;
         }
     }
@@ -86,5 +87,18 @@
         color: var(--white);
         border: 1px solid #4c4c4c;
         background-color: var(--black);
+        transition-property: background, border;
+        transition-duration: 0.25s;
+        transition-timing-function: eas;
+        
+        &:hover {
+            background: #171717;
+            border: 1px solid #171717;
+        }
+
+        &:active {
+            background: #323232;
+            border: 1px solid #323232;
+        }
     }
 }

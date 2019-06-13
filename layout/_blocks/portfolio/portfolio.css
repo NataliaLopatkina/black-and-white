@@ -30,6 +30,16 @@
         border: 11px solid #e2e2e2;
         box-sizing: border-box;
         margin: 10px;
+
+        @media (--M) {
+            width: 210px;
+            height: 156px;
+        }
+
+        @media (--XS) {
+            width: 200px;
+            height: 149px;
+        }
     }
 
     &__img {

@@ -1,11 +1,6 @@
 .work {
     padding-top: 11px;
 
-    @media (--S) {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
     @media (--XS) {
         padding-left: 0;
         padding-right: 0;
@@ -14,6 +9,15 @@
     .work__link {
         color: #0075d0;
         text-decoration: underline;
+        transition: color 0.25s ease;
+
+        &:hover {
+            color: #0098d0;
+        }
+
+        &:active {
+            color: #64bbff;
+        }
     }
 
     &__text {
@@ -22,5 +26,9 @@
 
     &__notice {
         padding-left: 23px;
+
+        @media (--S) {
+            padding-left: 0;
+        }
     }
 }
