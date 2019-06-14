@@ -1,11 +1,11 @@
 # Black and white
-Верстка макета Black and white.
+Layout Black and white.
 
-## Требования
+## Requirements
 - node v6.7.0
 - npm v3.10.3
 
-## Технологии
+## Technology
 ### CSS
 - [PostCSS](http://postcss.org/)
  - [postcss-import](https://github.com/postcss/postcss-import)
@@ -19,9 +19,9 @@
 ### HTML
 - [Pug](https://pugjs.org/api/getting-started.html)
 
-## Поддержка браузеров
-Автопрефиксер настроен под использование Flexbox Layout и на следующие браузеры:
-- 3 последние версии современных браузеров. На момент написания это:
+## Browser support
+The autoprefixer is configured to use Flexbox Layout and to the following browsers:
+- 3 latest versions of modern browsers. At the time of writing this is:
  - IE Edge 13+
  - Chrome 58+
  - FireFox 53+
@@ -29,77 +29,77 @@
  - Opera 45+
 - IE 11+
 
-## Установка
-Устонавливаем необходимые модули:
+## Setting
+Installing the necessary modules:
 ```
 npm i
 ```
 
-## Структура проекта
+## Structure of project
 ### _blocks
-Содержит в себе "блоки", имена папок и файлов в них должны быть одинаковые.
+It contains "blocks", the names of folders and files in them should be the same.
 
 ### _images
-Папка для изображений которые используются встраиванием непосредственно в HTML или CSS.
+Folder for images that are used by embedding directly in HTML or CSS.
 
 ### _pages
-Аналогично _blocks.
-**Исключение:** Если в проекте используется общий файл стилей, то он должен находится тут: `_pages/common/common.css`.
+Similarly _blocks.
+**Exclusion:** If the project uses a common style file, then it should be located here: `_pages/common/common.css`.
 
 ### fonts
-Папка для шрифтов. Все файлы каждого начертания шрифта должны находиться в отдельных папках и иметь одинаковые имена вместе с папкой в которой находятся.
+Folder for fonts. All files of each typeface should be in separate folders and have the same name along with the folder in which they are located.
 
 ### images
-Папка для изображений.
+Folder for images.
 
 ### scripts
-Папка для скриптов.
+Folder for scripts.
 
 ### stylesheets
-Папка для стилей. Должна содержать в себе 2 вида CSS файла. Оригинальный и минимизированный с префиксом `.min`.
+Folder for styles. Must contain 2 types of CSS file. Original and minimized with prefix `.min`.
 
-## Сборка проекта при помощи Gulp
-Все таски по которым идет сборка проекта находятся в файле `gulpfile.js`.
+## Building a project with Gulp
+All tasks for which the project is being built are in the file `gulpfile.js`.
 
-### Gulp таски
+### Gulp tasks
 #### `$ gulp go`
-1. Запускает сервер.
-2. Следит за изменениями всех файлов находящихся в папках `_blocks` и `_pages`.
-3. Собирает CSS файлы из папок `_pages/имя-страницы` и кладет в папку `stylesheets`.
-4. Минимизирует полученные CSS файлы и кладет рядом с оригиналами.
-5. Собирает HTML файлы из папок `_pages/имя-страницы` и кладет в корень проекта.
-6. Выравнивает отступы в полученных HTML файлах.
+1. Starts the server.
+2. Monitors the changes of all files located in folders `_blocks` and `_pages`.
+3. Collects CSS files from folders `_pages/name of page` and puts in a folder `stylesheets`.
+4. Minimizes the resulting CSS files and puts it next to the originals.
+5. Collects HTML files from folders `_pages/name of page` and puts in the root of the project.
+6. Aligns indents in received HTML files.
 
 #### `$ gulp go -page index`
-Помогает ускорить сборку за счет того, что собирается только обна страница.
-1. Запускает сервер.
-2. Следит за изменениями всех файлов находящихся в папке `_blocks` и **только** за `_pages/index.pug` и `_pages/index.сss`, все остальные файлы из папки `_pages` игнорируются.
-3. Собирает CSS файл из файла `_pages/index/index.css` и кладет в папку `stylesheets`.
-4. Минимизирует полученный CSS файл и кладет рядом с оригиналом.
-5. Собирает HTML файл из файла `_pages/index/index.pug` и кладет в корень проекта.
-6. Выравнивает отступы в полученных HTML файлах.
+It helps speed up the build due to the fact that only one page is collected.
+1. Starts the server.
+2. Monitors the changes of all files located in folders `_blocks` and **only** for `_pages/index.pug` and `_pages/index.сss`, all other files from the folder `_pages` are ignored.
+3. Collects CSS files from folders `_pages/index/index.css` and puts in a folder `stylesheets`.
+4. Minimizes the resulting CSS files and puts it next to the originals.
+5. Collects HTML files from folders `_pages/index/index.pug` and puts in the root of the project.
+6. Aligns indents in received HTML files.
 
-*`index` указан для примера, вместо него может быть любое название страницы.*
+*`index` specified for example, instead of it can be any page title*
 
 #### `$ gulp go -page index -style common`
-Помогает ускорить сборку за счет того, что собирается только обна страница.
-`-style common` следует использовать если на проекте общий CSS файл для всех страниц.
-1. Запускает сервер.
-2. Следит за изменениями всех файлов находящихся в папке `_blocks` и **только** за `_pages/index.pug` и `_pages/common/common.сss`, все остальные файлы из папки `_pages` игнорируются .
-3. Собирает CSS файл из файла `_pages/common/common.css` и кладет в папку `stylesheets`.
-4. Минимизирует полученный CSS файл и кладет рядом с оригиналом.
-5. Собирает HTML файл из файла `_pages/index/index.pug` и кладет в корень проекта.
-6. Выравнивает отступы в полученных HTML файлах.
+It helps speed up the build due to the fact that only one page is collected.
+`-style common` should be used if the project has a common CSS file for all pages.
+1. Starts the server.
+2. Monitors the changes of all files located in folders `_blocks` and **only** for `_pages/index.pug` and `_pages/common/common.сss`, all other files from the folder `_pages` are ignored .
+3. Collects CSS files from folders `_pages/common/common.css` and puts in a folder `stylesheets`.
+4. Minimizes the resulting CSS files and puts it next to the originals.
+5. Collects HTML files from folders `_pages/index/index.pug` and puts in the root of the project.
+6. Aligns indents in received HTML files.
 
-*`index` указан для примера, вместо него может быть любое название страницы.*
+*`index` specified for example, instead of it can be any page title*
 
 #### `$ gulp build`
-Финальная сборка перед коммитом.
-1. Собирает CSS файлы из папок `_pages/имя-страницы` и кладет в папку `stylesheets`.
-2. Минимизирует полученные CSS файлы и кладет рядом с оригиналами.
-3. Собирает HTML файлы из папок `_pages/имя-страницы` и кладет в корень проекта.
-4. Выравнивает отступы в полученных HTML файлах.
+Final build before commit.
+1. Collects CSS files from folders `_pages/имя-страницы` and puts in a folder `stylesheets`.
+2. Minimizes the resulting CSS files and puts it next to the originals.
+3. Collects HTML files from folders `_pages/имя-страницы` and puts in the root of the project.
+4. Aligns indents in received HTML files.
 
 😊
 
-Приятного кодинга!
+Enjoy your coding!
